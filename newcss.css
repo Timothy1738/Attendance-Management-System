@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;1,200&display=swap');
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+:root {
+    --box-shadow: 0 10px 1rem rgba(205, 231, 238, 0.5);
+    --color-bg: #4378ec;
+    --background: #f0f2f3;
+    --color-white: #ffffff;
+    --color-primary: #099BF8;
+    --color-text-muted: #9e9292;
+    --color-bg-secondary: #779be9;
+    --pending-cards-bg: #d2dffc;
+}
+
+button {
+    cursor: pointer;
+}
+
+footer {
+    width: 100%;
+    padding: 2rem;
+    display: grid;
+    place-items: center;
+    background-color: var(--color-bg);
+}
+
+footer .div-copy-right p {
+    color: var(--color-white);
+}
+
+footer .div-copy-right p:first-child {
+    font-size: 1.2rem;
+}
+
+footer .div-copy-right p:last-child{
+    margin-top: 1rem;
+}
+
+footer .div-copy-right p a {
+    color: white;
+    text-decoration: underline;
+
+}
+

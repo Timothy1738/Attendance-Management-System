@@ -1,0 +1,3302 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;1,200&display=swap');
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+}
+
+:root {
+    --box-shadow: 0 10px 1rem rgba(205, 231, 238, 0.5);
+    --color-bg: #4378ec;
+    --background: #f0f2f3;
+    --color-white: #ffffff;
+    --color-primary: #099BF8;
+    --color-text-muted: #9e9292;
+    --color-bg-secondary: #779be9;
+    --pending-cards-bg: #d2dffc;
+    --darker-tint_1: #5E3494;
+}
+
+button {
+    cursor: pointer;
+}
+
+footer {
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-bg);
+}
+
+footer .div-copy-right p {
+    color: var(--color-white);
+}
+
+footer .div-copy-right p:first-child {
+    font-size: 1.2rem;
+}
+
+footer .div-copy-right p:last-child {
+    margin-top: 1rem;
+}
+
+footer .div-copy-right p a {
+    color: white;
+    text-decoration: underline;
+
+}
+
+
+/*login form*/
+.login {
+    width: 100vw;
+    height: 100vh;
+    background: var(--color-primary);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login .form {
+    width: 60%;
+}
+
+.citation {
+    width: 40%;
+    position: relative;
+}
+
+.citation img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+
+
+.citation .name {
+    position: absolute;
+    bottom: 0;
+    background-color: #f4f4f4;
+    opacity: 0.9;
+    height: 5rem;
+    text-align: center;
+    padding: 2%;
+    width: 100%;
+}
+
+.citation .name h1 span {
+    color: var(--color-primary);
+    opacity: 1;
+}
+
+.citation .name a {
+    text-decoration: underline;
+}
+
+.citation .name div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 3%;
+}
+
+.header h2 {
+    color: #f4f4f4;
+    font-size: 2rem;
+}
+
+.socials {
+    position: absolute;
+    top: 20%;
+    gap: 1rem;
+    right: 3%;
+    display: flex;
+    flex-direction: column;
+}
+
+.socials .iconify {
+    font-size: 2rem;
+    color: black;
+    border-radius: 50%;
+    border: 1px solid #2F4F4F;
+    padding: 0.6rem;
+    transition: all 0.3s ease;
+}
+
+.socials .iconify:hover {
+    transform: scale(1.1);
+}
+
+.header .logo {
+    width: 5.5rem;
+    padding: 1rem;
+    color: #f4f4f4;
+    border: 3px solid #f4f4f4;
+    height: 5.5rem;
+    padding: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form {
+    width: 50%;
+    padding: 10px 10px 20px;
+    border-radius: 10px;
+    background: #f4f4f4;
+    transition: all 0.3s ease;
+    box-shadow: var(--box-shadow);
+    margin: 3% auto;
+}
+
+.login-form:hover {
+    box-shadow: none;
+}
+
+.login-form h3 {
+    text-align: center;
+    color: var(--color-text-muted);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.login-form form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 0.6rem;
+}
+
+.login-form form input {
+    width: 100%;
+    border-radius: 10px;
+    padding: 1rem;
+    font-size: 15px;
+    background-color: #ffff;
+    border: 1px solid #000;
+}
+
+.login-form form input[type=submit] {
+    background-color: var(--color-bg);
+    color: white;
+    font-size: 15px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.login-form form input[type=submit]:hover {
+    background-color: var(--color-bg-secondary);
+}
+
+.login-form form a {
+    color: #000;
+    transition: all 0.5s ease;
+}
+
+.login-form form a:hover {
+    text-decoration: none;
+}
+
+.error-msg {
+    margin: 10px 0;
+    display: block;
+    background: crimson;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.success-msg {
+    display: block;
+    margin: 10px 0;
+    background: green;
+    color: var(--color-white);
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 10px;
+}
+
+/*END*/
+
+/*validate email page*/
+.validate-email {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    /* background: linear-gradient(to top left, #3333cc 7%, #00ffcc 84%); */
+    background: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.validate-email .form {
+    width: 60%;
+}
+
+.validate {
+    width: 50%;
+    box-shadow: var(--box-shadow);
+    transition: all 0.3s ease;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 3% auto;
+}
+
+.validate:hover {
+    box-shadow: none;
+}
+
+.validate h3 {
+    text-align: center;
+    color: var(--color-text-muted);
+}
+
+.validate form {
+    display: flex;
+    margin-top: 1rem;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.validate form input {
+    padding: 1rem;
+    background-color: #ffff;
+    border: 1px solid #000;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.validate form input[type=submit] {
+    background-color: var(--color-bg);
+    border: none;
+    transition: all 0.5s ease;
+    font-weight: 600;
+    color: #ffff;
+}
+
+.validate form input[type=submit]:hover {
+    background-color: var(--color-bg-secondary);
+    cursor: pointer;
+}
+
+.validate form .return_to_login {
+    text-align: center;
+    color: #000;
+}
+
+.validate form .return_to_login:hover {
+    text-decoration: none;
+}
+
+/*edit password page*/
+.editpsd {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background: var(--color-primary);
+    overflow: hidden;
+    /* background: linear-gradient(to top left, #3333cc 7%, #00ffcc 84%); */
+    justify-content: center;
+    align-items: center;
+}
+
+.editpsd .form {
+    width: 60%;
+}
+
+.edit {
+    width: 50%;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    margin: 3% auto;
+}
+
+.edit:hover {
+    box-shadow: none;
+}
+
+.edit h3 {
+    text-align: center;
+    color: var(--color-text-muted);
+}
+
+.edit form {
+    display: flex;
+    margin: 1rem;
+    row-gap: 1rem;
+    flex-direction: column;
+}
+
+.edit form input {
+    padding: 1rem;
+    background-color: #ffff;
+    font-size: 15px;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+.edit form input[type=submit] {
+    background-color: var(--color-bg);
+    border: none;
+    color: #ffff;
+    transition: all 0.5s ease;
+    font-weight: 600;
+}
+
+.edit form input[type=submit]:hover {
+    cursor: pointer;
+    background-color: var(--color-bg-secondary);
+}
+
+/*succesffuly changed passwrd */
+.success {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    /* background: linear-gradient(to top left, #3333cc 7%, #00ffcc 84%); */
+    background: var(--color-primary);
+    display: grid;
+    place-items: center;
+}
+
+.message {
+    width: 25%;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+    display: flex;
+    transition: all 0.3s ease;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.message:hover {
+    box-shadow: none;
+}
+
+.message h3 {
+    color: var(--color-text-muted);
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.message p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.message button {
+    padding: 1rem;
+    background: var(--color-bg);
+    margin-top: 1rem;
+    border-radius: 10px;
+    color: #ffff;
+    font-weight: 600;
+    transition: all 0.5s ease;
+}
+
+.message button:hover {
+    cursor: pointer;
+    background: var(--color-bg-secondary);
+}
+
+/*===================student account==========================*/
+
+.std-header {
+    font-size: 2rem;
+    color: var(--color-primary);
+}
+
+.student_acc {
+    padding: 1rem;
+    background: var(--background);
+    overflow: hidden;
+    position: relative;
+}
+
+.student_acc .std_nav {
+    width: 100%;
+    background-color: var(--color-white);
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+    transition: all 0.5s ease;
+    justify-content: space-between;
+}
+
+.student_acc .std_nav:hover {
+    box-shadow: none;
+}
+
+.student_acc .std_nav .logo {
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--color-primary);
+}
+
+.student_acc .std_nav .nav-links {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+
+.student_acc .std_nav .nav-links a {
+    text-decoration: none;
+    color: #000;
+    position: relative;
+}
+
+.student_acc .std_nav .nav-links a::before {
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: var(--color-primary);
+    border-radius: 50px;
+    top: 20px;
+    transition: all 0.3s ease;
+    position: absolute;
+}
+
+.student_acc .std_nav .nav-links a.active::before {
+    width: 100%;
+}
+
+.student_acc .std_nav .nav-links a:hover::before {
+    width: 100%;
+}
+
+.student_acc .std_nav .nav-links a:not(:last-child) {
+    margin-right: 2rem;
+}
+
+.student_acc .std_nav button {
+    padding: 10px 1rem;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 50px;
+    transition: all 0.5s ease;
+}
+
+.student_acc .std_nav button:hover {
+    cursor: pointer;
+    background-color: crimson;
+}
+
+/*body student account*/
+.student_acc #home {
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.student_acc #home .container {
+    width: 100%;
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+    padding: 10px;
+    left: 15px;
+    transition: all 0.5s ease;
+    background-color: var(--color-white);
+    border-radius: 10px;
+}
+
+.student_acc #home .container:hover {
+    box-shadow: none;
+}
+
+.student_acc #home .container .top {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.student_acc #home .container .top .about {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.student_acc #home .container .top .about .profile {
+    border-radius: 50%;
+    overflow: hidden;
+    height: 4rem;
+    width: 4rem;
+    border: 2px solid var(--color-primary);
+}
+
+.student_acc #home .container .top .about .profile img {
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.student_acc #home .container .top .about p {
+    font-weight: bold;
+}
+
+.student_acc #home .container .top .about p span {
+    color: var(--color-primary);
+}
+
+.student_acc #home .container .top .heading {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.student_acc #home .container .top .heading .date {
+    border-radius: 50px;
+    background-color: #f0f2f3;
+    padding: 10px 1rem;
+}
+
+.student_acc #home .container .top .heading .day p {
+    font-size: 20px;
+}
+
+.student_acc #home .container .top .heading .day p span {
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.student_acc #home .container .att_td {
+    margin-top: 1rem;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid rgb(231, 226, 226);
+    width: 100%;
+}
+
+.student_acc #home .container .att_td td,
+th {
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 1px solid rgb(231, 226, 226);
+}
+
+.student_acc #home .container .att_td tr:last-child {
+    border-bottom: none;
+}
+
+.student_acc #home .container .att_td td:not(:last-child) {
+    border-right: 1px solid rgb(231, 226, 226);
+}
+
+.student_acc #home .container .att_td th:not(:last-child) {
+    border-right: 1px solid rgb(231, 226, 226);
+}
+
+.student_acc #home .container .att_td th {
+    font-size: 20px;
+}
+
+.ispresent {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--color-primary);
+}
+
+/*messages bar*/
+.student_acc #home .mess_side_bar {
+    width: 100%;
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+    background-color: var(--color-white);
+    transition: all 0.5s ease;
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+}
+
+.student_acc #home .mess_side_bar:hover {
+    box-shadow: none;
+}
+
+.student_acc #home .mess_side_bar h2 {
+    text-align: center;
+}
+
+.student_acc #home .mess_side_bar .messages {
+    margin-top: 1rem;
+    width: 100%;
+    gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.student_acc #home .mess_side_bar .messages .message-card {
+    border-radius: 10px;
+    border: 1px solid rgb(231, 226, 226);
+    padding: 10px;
+    transition: all 0.5s ease;
+    width: 31%;
+}
+
+.student_acc #home .mess_side_bar .messages .message-card:hover {
+    border: 1px solid #000;
+}
+
+.student_acc #home .mess_side_bar .messages .message-card .top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.student_acc #home .mess_side_bar .messages .message-card .top .cred {
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.student_acc #home .mess_side_bar .messages .message-card .top .cred img {
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    border: 2px solid var(--color-primary);
+}
+
+.student_acc #home .mess_side_bar .messages .message-card .top button {
+    padding: 10px;
+    border: 1px solid gray;
+}
+
+.student_acc #home .mess_side_bar .messages .message-card .mid {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 100%;
+}
+
+.student_acc #home .mess_side_bar .messages .message-card .mid p span {
+    color: var(--color-primary);
+}
+
+.student_acc #home .mess_side_bar .messages .message-card .msg-body {
+    margin-top: 1rem;
+    color: var(--color-text-muted);
+    font-size: 15px;
+}
+
+.student_acc #home .mess_side_bar .messages .message-card:hover .msg-body {
+    color: #000;
+}
+
+.student_acc .meet_teachers {
+    padding: 10px;
+    margin-top: 1rem;
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--color-white);
+}
+
+.student_acc .meet_teachers .teacher_cards {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.student_acc .meet_teachers .teacher_cards .teacher_card {
+    width: calc(100% / 3);
+    background-color: var(--pending-cards-bg);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 10px 1rem rgba(59, 61, 61, 0.5);
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    transform: scale(0.98);
+}
+
+.student_acc .meet_teachers .teacher_cards .teacher_card:hover {
+    box-shadow: none;
+}
+
+.student_acc .meet_teachers .teacher_cards .teacher_card .top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.student_acc .meet_teachers .teacher_cards .teacher_card .top img {
+    border-radius: 10px;
+}
+
+.student_acc .meet_teachers .teacher_cards .teacher_card .top .name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.student_acc .meet_teachers .teacher_cards .teacher_card .top .name h4 span {
+    color: var(--color-primary);
+}
+
+.student_acc .meet_teachers .teacher_cards .teacher_card .top h4 {
+    margin-top: 1rem;
+}
+
+.student_acc .meet_teachers .teacher_cards .teacher_card .top .teacher_name {
+    color: var(--color-primary);
+}
+
+.student_acc .meet_teachers .teacher_cards .teacher_card .bottom {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.student_acc .meet_teachers .teacher_cards .teacher_card .bottom .sendmessage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background-color: var(--color-primary);
+    color: white;
+    gap: 10px;
+    padding: 0.7rem;
+    cursor: pointer;
+}
+
+.student_acc .meet_teachers .teacher_cards .teacher_card .bottom .phone,
+.email {
+    display: flex;
+    row-gap: 5px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.student_acc .meet_teachers .teacher_cards .teacher_card .bottom .phone .iconify,
+.email .iconify {
+    padding: 1rem;
+    font-size: 20px;
+    border-radius: 50%;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+}
+
+/*===============================
+================================MY ATTENDANCE
+================================
+===============================*/
+.my-attendance {
+    background-color: var(--color-white);
+    border-radius: 10px;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 10px;
+}
+
+.my-attendance h3 {
+    text-align: center;
+    color: var(--color-primary);
+    size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.my-attendance .tables {
+    margin-top: 1rem;
+    width: 50%;
+}
+
+.my-attendance .tables tr th {
+    padding: 1rem;
+    background-color: var(--background);
+    border-right: 1px solid rgb(145, 135, 135);
+    border-bottom: 1px solid rgb(145, 135, 135);
+}
+
+.my-attendance .tables tr td {
+    text-align: center;
+    padding: 1rem;
+    border-right: 1px solid rgb(145, 135, 135);
+    border-bottom: 1px solid rgb(145, 135, 135);
+}
+
+/*===============================
+================================MY CLASS SCHEDULE
+================================
+===============================*/
+.timetable {
+    background-color: var(--color-white);
+    border-radius: 10px;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    width: 100%;
+    padding: 10px;
+}
+
+.timetable .dash {
+    width: 100%;
+    display: flex;
+    margin-top: -150px;
+    border-radius: 10px;
+    background-color: var(--pending-cards-bg);
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.timetable .dash .tables {
+    width: 100%;
+
+    padding: 10px;
+}
+
+.timetable .dash .tables table {
+    width: 100%;
+}
+
+.timetable .dash .tables table tr th {
+    padding: 1rem;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.timetable .dash .tables table tr td {
+    text-align: center;
+    border-right: 1px solid rgb(145, 135, 135);
+    border-bottom: 1px solid rgb(145, 135, 135);
+    padding: 1rem;
+
+}
+
+
+
+
+/*===========PROFILE===========*/
+.bio {
+    margin-top: 1rem;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    padding: 20px;
+    background-color: var(--color-white);
+}
+
+.bio .bio-card {
+    width: 80%;
+    height: 90%;
+    background-color: var(--pending-cards-bg);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.bio .bio-card .left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+    height: 100%;
+}
+
+.bio .bio-card .left img {
+    width: 100%;
+    border-radius: 10px;
+    height: 90%;
+}
+
+.line {
+    width: 5px;
+    background-color: var(--color-white);
+    height: 100%;
+}
+
+.bio .bio-card .right {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.bio .bio-card .right h3 {
+    color: var(--color-primary);
+    font-size: 2rem;
+}
+
+.bio .bio-card .right p {
+    font-size: 20px;
+    padding: 0.7rem;
+    width: 100%;
+    background-color: var(--color-white);
+    border-radius: 10px;
+    border: 3px solid var(--color-primary);
+}
+
+.bio .bio-card .right p span {
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.bio .bio-card .highlight {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+.bio .bio-card button {
+    padding: 10px 1rem;
+    width: 50%;
+    border-radius: 50px;
+    color: var(--color-white);
+    cursor: pointer;
+    background-color: var(--color-primary);
+}
+
+/*================
+===================
+ABSENCE REQUEST PAGE========
+===================
+===================*/
+.student_acc #absence {
+    background-color: var(--color-white);
+    border-radius: 10px;
+    margin-top: 1rem;
+    width: 100%;
+    padding: 10px;
+}
+
+.student_acc #absence .abs-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.student_acc #absence .abs-top button {
+    padding: 10px 1rem;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+    border-radius: 50px;
+    transition: all 0.5s ease;
+}
+
+.student_acc #absence .await {
+    width: 100%;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+
+}
+
+.student_acc #absence .await .await-flex {
+    border-bottom: 1px solid #9e9292;
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    padding-bottom: 1rem;
+    border-top: 1px solid #9e9292;
+}
+
+.student_acc #absence .await h3 {
+    margin-top: 1rem;
+}
+
+.student_acc #absence .await .await-flex .await-card {
+    border-radius: 10px;
+    margin-top: 3rem;
+    padding: 10px;
+    background-color: #d2dffc;
+    width: 30%;
+}
+
+.upper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.upper .date {
+    text-decoration: underline;
+    font-size: 15px;
+}
+
+.state {
+    padding: 4px 10px;
+    background-color: grey;
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    border-radius: 50px;
+    transition: all 0.5s ease;
+}
+
+.approved {
+    background-color: rgb(68, 182, 68);
+}
+
+.denied {
+    background-color: rgb(250, 82, 82);
+}
+
+.reason {
+    font-size: 15px;
+    margin-top: 1rem;
+}
+
+.student_acc #absence .status-known {
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.student_acc #absence .status-known .prev-req {
+    display: flex;
+    width: 100%;
+    margin-top: 1rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.student_acc #absence .status-known .prev-req .Pcard-1 {
+    width: 30%;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: var(--pending-cards-bg);
+}
+
+/*abscence FORM*/
+.abs-form {
+    padding: 5rem 0 10rem;
+    display: grid;
+    place-items: center;
+    background-color: var(--background);
+}
+
+.return {
+    height: 4rem;
+    width: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    cursor: pointer;
+    background-color: var(--color-primary);
+}
+
+.return .iconify {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--color-white);
+}
+
+.abs-form form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: 1rem;
+    row-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-white);
+    box-shadow: 0 10px 1rem rgba(59, 61, 61, 0.5);
+    border-radius: 10px;
+}
+
+.abs-form form h2 {
+    text-align: center;
+}
+
+.abs-form form .input {
+    width: 100%;
+    row-gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.abs-form form .input input,
+textarea,
+select {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: var(--background);
+}
+
+.abs-form form input[type=submit] {
+    width: 30%;
+    background-color: var(--color-primary);
+    border-radius: 50px;
+    padding: 10px 1rem;
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+/*===EDIT ACC PAGE===*/
+.student_acc .editacc {
+    padding: 10px;
+    margin-top: 1rem;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
+    border-radius: 10px;
+    background-color: var(--color-white);
+}
+
+.student_acc .editacc form {
+    width: 25%;
+    padding: 10px 10px 20px;
+    border-radius: 10px;
+    background: #dadee7;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    transition: all 0.3s ease;
+}
+
+.student_acc .editacc form input {
+    padding: 1rem;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.student_acc .editacc form input[type=submit] {
+    background-color: var(--color-primary);
+    color: white;
+    font-size: 15px;
+}
+
+/*====================
+====================
+==================================
+==============================ADMIN FROM CSS=====
+======================================================
+==========================================================
+=========================================*/
+.admin_acc {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    background-color: var(--background);
+    overflow: hidden;
+    position: relative;
+}
+
+.admin_acc .admin_container {
+    width: 85%;
+    border-radius: 10px;
+    background-color: var(--color-white);
+    padding: 10px;
+}
+
+.container {
+    width: 85%;
+    border-radius: 10px;
+    background-color: var(--color-white);
+    padding: 10px;
+}
+
+
+.admin_acc .admin_container header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin_acc .admin_container header .small-box {
+    display: flex;
+    align-items: center;
+}
+
+.admin_acc .admin_container header .small-box h3 {
+    font-size: 1.8rem;
+    color: var(--color-primary);
+}
+
+.admin_acc .admin_container header .small-box .iconify {
+    font-size: 1.8rem;
+}
+
+.admin_acc .admin_container header .info-box {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.admin_acc .admin_container header .info-box p {
+    padding: 5px 20px;
+    border-radius: 50px;
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.admin_acc .admin_container .welcome {
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--background);
+    margin-top: 1rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.admin_acc .admin_container .welcome .iconify {
+    font-size: 3rem;
+}
+
+.admin_acc .admin_container .welcome h1 span {
+    color: var(--color-primary);
+}
+
+.admin_acc .admin_container header .info-box .img {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.admin_acc .admin_container header .info-box .img img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 3px solid var(--color-primary);
+}
+
+.admin_acc .admin_container .analytics {
+    margin-top: 1rem;
+}
+
+.admin_acc .admin_container .analytics h3 {
+    color: var(--color-primary);
+    font-size: 1.4rem;
+}
+
+.admin_acc .admin_container .analytics .cards {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin_acc .admin_container .analytics .cards .card {
+    width: calc(95% / 3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+
+}
+
+.admin_acc .admin_container .analytics .cards .card .word-piece {
+    padding: 20px;
+    width: 70%;
+    display: grid;
+    place-items: center;
+    height: 100%;
+}
+
+.admin_acc .admin_container .analytics .cards .card:first-child .word-piece {
+    background-color: #008080;
+}
+
+.admin_acc .admin_container .analytics .cards .card:nth-child(2) .word-piece {
+    background-color: #2E8B57;
+}
+
+.admin_acc .admin_container .analytics .cards .card:last-child .word-piece {
+    background-color: #FF6347;
+}
+
+.admin_acc .admin_container .analytics .cards .card .word-piece h4 {
+    font-size: 20px;
+    color: var(--color-white);
+}
+
+.admin_acc .admin_container .analytics .cards .card .stats {
+    width: 30%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    border-left: 1px solid var(--color-white);
+    border-top: 1px solid #008080;
+    background-color: #2F4F4F;
+
+}
+
+.admin_acc .admin_container .analytics .cards .card .stats span {
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--color-white);
+}
+
+.admin_acc .admin_container .info-area {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.admin_acc .admin_container .info-area .calender {
+    width: 60%;
+    padding: 10px;
+    background-color: var(--background);
+    border-radius: 10px;
+}
+
+.admin_acc .admin_container .info-area .notifications {
+    background-color: var(--pending-cards-bg);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 40%;
+}
+
+.admin_acc .admin_container .info-area .notifications .empty_notifications {
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.admin_acc .admin_container .info-area .notifications .empty_notifications p {
+    font-size: 18px;
+    display: flex;
+    gap: 10px;
+    margin-top: 5rem;
+    align-items: center;
+}
+
+.admin_acc .admin_container .info-area .notifications .empty_notifications .iconify {
+    font-size: 200px;
+    color: var(--color-text-muted);
+}
+
+.admin_acc .admin_container .info-area .notifications .notify {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin_acc .admin_container .info-area .notifications .notify h3 {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.admin_acc .admin_container .info-area .notifications .notify h3 .iconify {
+    font-size: 1.8rem;
+}
+
+.admin_acc .admin_container .info-area .notifications .notification_area {
+    width: 100%;
+}
+
+.admin_acc .admin_container .info-area .notifications .notification_area .notification_box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.admin_acc .admin_container .info-area .notifications .notification_area .notification_box form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin_acc .admin_container .info-area .notifications .notification_area .notification_box form button {
+    padding: 1rem;
+    display: flex;
+    border: 1px solid #008080;
+    align-items: center;
+}
+
+.admin_acc .admin_container .info-area .notifications .notification_area .notification_box p {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+
+    color: var(--color-text-muted);
+    transition: all 0.3s ease;
+    border: 1px solid var(--color-text-muted);
+}
+
+.admin_acc .admin_container .info-area .notifications .notification_area .notification_box p:hover {
+    color: rgb(27, 26, 26);
+    border-color: #008080;
+}
+
+
+.sidebar {
+    width: 15%;
+    height: 150vh;
+    background-color: var(--color-white);
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sidebar .identify {
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    align-self: center;
+    display: flex;
+    margin-top: 1rem;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--color-primary);
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    row-gap: 10px;
+    margin-top: 1rem;
+    overflow: hidden;
+}
+
+.sidebar nav .item {
+    transition: all 0.3s ease;
+    width: 100%;
+    display: flex;
+}
+
+
+
+.sidebar nav .item a {
+    text-decoration: none;
+    text-align: center;
+    color: #000;
+    width: 100%;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+.sidebar nav .item a:hover {
+    transform: translateX(-5px);
+}
+
+.sidebar nav .item a.active {
+    border-left: 5px solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+.sidebar button {
+    padding: 10px 1rem;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 50px;
+    transition: all 0.5s ease;
+}
+
+.sidebar button:hover {
+    cursor: pointer;
+    background-color: crimson;
+}
+
+/*container ADMIN ACCOUNT*/
+
+
+/*after HEADER*/
+.view-activity {
+    padding: 1rem;
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    justify-content: space-between;
+    background-color: var(--background);
+    overflow: hidden;
+    position: relative;
+}
+
+.view-activity .sidebar {
+    margin-left: -300px;
+    transition: all 0.3s ease;
+}
+
+.view-activity .sidebar.active {
+    margin-left: 0;
+}
+
+.view-activity .container {
+    background-color: var(--color-white);
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+.view-activity .container .top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.view-activity .container .top .west {
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.view-activity .container .top .right {
+    display: flex;
+    align-items: center;
+}
+
+.view-activity .container .top .west .menu-icon .iconify {
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--color-primary);
+}
+
+.view-activity .container .top .west .date {
+    border-radius: 50px;
+    background-color: #f0f2f3;
+    padding: 10px 1rem;
+}
+
+.view-activity .container .top .right button {
+    padding: 10px 1rem;
+    position: relative;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    display: flex;
+    margin-left: 40px;
+    cursor: pointer;
+    align-items: center;
+    gap: 10px;
+    border-radius: 50px;
+    transition: all 0.5s ease;
+}
+
+.view-activity .container .view-activity-table {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.view-activity .container .view-activity-table th {
+    font-size: 1;
+    background-color: var(--background);
+}
+
+.view-activity .container .view-activity-table td {
+    color: #000;
+    padding: 5px 5px;
+    font-size: 0.8rem;
+    border-right: 1px solid rgb(145, 135, 135);
+    border-bottom: 1px solid rgb(145, 135, 135);
+    text-align: center;
+}
+
+.view-activity .container .view-activity-table td #iconify {
+    color: var(--color-primary);
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.view-activity .container .view-activity-table td .iconify {
+    color: crimson;
+    cursor: pointer;
+    font-size: 3rem;
+}
+
+
+/*===VIEW CLASSES====*/
+.view-activity .container .student-count {
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.view-activity .container .student-count h3 {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    text-align: center;
+}
+
+.view-activity .container .student-count .boxes {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    row-gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.view-activity .container .student-count .boxes .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    width: 31%;
+    row-gap: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: var(--pending-cards-bg);
+}
+
+.view-activity .container .student-count .boxes .box p:first-child {
+    padding: 1rem;
+    color: var(--color-primary);
+    border-radius: 50%;
+    font-weight: bold;
+    background-color: var(--color-white);
+}
+
+.view-activity .container .student-count .boxes .box p span {
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.view-activity .container .student-count .total {
+    background-color: var(--pending-cards-bg);
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+    margin-top: 1rem;
+    border-radius: 10px;
+}
+
+.view-activity .container .student-count .total p span {
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.view-activity .container .student-count .total p {
+    padding: 1rem;
+    border-radius: 50px;
+    background-color: var(--color-white);
+}
+
+/*====VIEWSTUDENTS CARDS===*/
+.content-cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content-cards .card {
+    margin-top: 2rem;
+    transition: all 0.3s ease;
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom: 5px solid var(--color-primary);
+    border-left: 5px solid var(--color-primary);
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 1000px;
+    background-color: var(--color-white);
+    width: calc(95% / 3);
+}
+
+.content-cards .card:hover {
+    transform: translateY(-5px);
+}
+
+.content-cards .card .img {
+    width: 100%;
+    height: 60%;
+}
+
+.content-cards .card .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content-cards .card .bio {
+    display: flex;
+    margin-top: 1rem;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    padding: 10px;
+    row-gap: 10px;
+}
+
+.content-cards .card .bio p span {
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.content-cards .card .actions {
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    margin-top: -1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content-cards .card .actions #iconify {
+    color: var(--color-primary);
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.content-cards .card .actions .iconify {
+    color: crimson;
+    cursor: pointer;
+    font-size: 3rem;
+}
+
+.content-cards .card .actions #edit {
+    color: green;
+    cursor: pointer;
+    font-size: 3rem;
+}
+
+/*===========================ADD ACTIVITY PAGE==========================
+========LIKE ADD SOMEONE============*/
+.add-activity {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    background-color: var(--background);
+}
+
+.add-activity .activity {
+    border-radius: 10px;
+    background-color: var(--color-white);
+    padding: 1rem;
+    box-shadow: 0 10px 1rem rgba(59, 61, 61, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-activity .activity h2 {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.add-activity .activity .form-body {
+    margin-top: 1rem;
+    gap: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-activity .activity .form-body input {
+    border-bottom: 1px solid var(--color-bg);
+    background: none;
+    padding: 1rem;
+}
+
+.add-activity .activity .form-body select {
+    border-bottom: 1px solid var(--color-bg);
+    background: var(--background);
+    border-radius: 0px;
+    padding: 1rem;
+}
+
+.add-activity .activity input[type=submit] {
+    padding: 10px 1rem;
+    position: relative;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    display: flex;
+    margin-left: 40px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 50px;
+    margin-top: 1rem;
+    transition: all 0.5s ease;
+}
+
+.add-activity .activity .form-body .right,
+.left {
+    display: flex;
+    row-gap: 1rem;
+    width: 50%;
+    flex-direction: column;
+}
+
+.add-activity .activity .form-body .right .input {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.add-activity .activity .form-body .left .input {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.add-activity .activity .form-body .left input,
+.right input {
+    border-bottom: 1px solid var(--color-bg);
+    background: none;
+    padding: 1rem;
+}
+
+.add-activity .activity .form-body .right input[type=file] {
+    border: none;
+    background-color: var(--background);
+}
+
+.add-activity .activity .form-body .right .input input {
+    background-color: var(--background);
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+}
+
+
+/*========VIEW ATTENDANCE ADMIN ACC================*/
+.viewATTadminTab {
+    width: 100%;
+    background-color: var(--color-primary);
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.viewATTadminTab a {
+    border: 2px solid var(--color-white);
+    background: none;
+    padding: 10px 1rem;
+    border-radius: 50px;
+    color: var(--color-white);
+    transition: all 0.3s ease;
+}
+
+.viewATTadminTab a.active {
+    background-color: var(--background);
+    color: var(--color-primary);
+}
+
+
+.viewATTadminTab a:hover {
+    transform: scale(1.1);
+    background-color: var(--background);
+    color: var(--color-primary);
+}
+
+.adminSection {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.adminSection table {
+    width: 100%;
+}
+
+.adminSection table tr th {
+    background-color: var(--background);
+    padding: 1rem;
+}
+
+.adminSection table tr td {
+    border-right: 1px solid rgb(145, 135, 135);
+    border-bottom: 1px solid rgb(145, 135, 135);
+    text-align: center;
+    padding: 1rem;
+}
+
+.edit-std-profile {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background);
+}
+
+.edit-std-profile form {
+    width: 40%;
+    background-color: var(--color-white);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.edit-std-profile form input {
+
+    border-bottom: 1px solid var(--color-primary);
+    background: var(--background);
+    width: 100%;
+    padding: 1rem;
+}
+
+.edit-std-profile form input:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.edit-std-profile form .form-body {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.edit-std-profile form .form-body .right,
+.left {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-std-profile form .form-body .right input,
+.left input {
+    border-bottom: 1px solid var(--color-primary);
+    background: var(--background);
+    width: 100%;
+    padding: 1rem;
+}
+
+.edit-std-profile form .form-body .right select {
+    border-bottom: 1px solid var(--color-primary);
+    background: var(--background);
+    width: 100%;
+    border-radius: none;
+    padding: 1rem;
+}
+
+.edit-std-profile form input[type=submit] {
+    width: 50%;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 50px;
+    background-color: var(--color-primary);
+    cursor: pointer;
+    color: var(--color-white);
+    font-size: 15px;
+}
+
+/*ADMIN VIEW PROFILE*/
+.admin-box {
+    width: 100%;
+    display: block;
+}
+
+.admin-box .admin-card {
+    background-color: var(--pending-cards-bg);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    height: 100vh;
+    margin-top: 1rem;
+}
+
+.admin-box .admin-card .img {
+    width: 40%;
+    height: 100%;
+}
+
+.admin-box .admin-card .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid var(--color-primary);
+}
+
+.admin-box .admin-card .bio {
+    width: 60%;
+    height: 100%;
+    row-gap: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-white);
+    border-radius: 10px;
+}
+
+.admin-box .admin-card .bio p {
+    padding: 10px;
+    width: 100%;
+    background-color: var(--color-white);
+    border-radius: 10px;
+    font-size: 18px;
+    border: 3px solid var(--color-primary);
+
+}
+
+.admin-box .admin-card .bio p span {
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+
+.admin-box .admin-card .bio a {
+    background-color: var(--color-primary);
+    cursor: pointer;
+    font-size: 16px;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.admin-box .admin-card .bio a button {
+    background: none;
+    color: var(--color-white);
+    font-size: 16px;
+}
+
+.view-activity .container .table-activity {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.view-activity .container .table-activity th {
+
+    background-color: var(--background);
+}
+
+.view-activity .container .table-activity td {
+    color: #000;
+    padding: 5px 5px;
+    border-right: 1px solid rgb(145, 135, 135);
+    border-bottom: 1px solid rgb(145, 135, 135);
+    text-align: center;
+}
+
+/* .view-activity .container .table-activity iconify {
+    color: var(--color-primary);
+    font-size: 3rem;
+    cursor: pointer;
+} */
+
+.view-activity .container .table-activity td .iconify {
+    color: crimson;
+    cursor: pointer;
+    font-size: 3rem;
+}
+
+.track_att {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--color-white);
+}
+
+.track_att .brief-profile {
+    display: flex;
+    width: 100%;
+    background-color: var(--pending-cards-bg);
+    border-radius: 10px;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.track_att .brief-profile .img {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.track_att .brief-profile .img img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 3px solid var(--color-primary);
+}
+
+.track_att .view-activity-table {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.track_att .view-activity-table th {
+    font-size: 1;
+    background-color: var(--background);
+}
+
+.track_att .view-activity-table td {
+    color: #000;
+    padding: 1rem;
+    font-size: 0.8rem;
+    border-right: 1px solid rgb(145, 135, 135);
+    border-bottom: 1px solid rgb(145, 135, 135);
+    text-align: center;
+}
+
+
+
+/*************************************************************************/
+/*************************************************************************/
+/*************************************************************************/
+/**=============================================================
+==========================TEACHER ACCOUNT=====================
+==============================================================**/
+/*************************************************************************/
+/*************************************************************************/
+/*************************************************************************/
+.teacher_acc .container .about_dash {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.teacher_acc .container .about_dash .h1 {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.teacher_acc .container .about_dash .h1 span {
+    color: var(--color-primary);
+}
+
+.teacher_acc .container h1 {
+    display: flex;
+    align-items: center;
+}
+
+.teacher_acc .container h1 .iconify {
+    color: var(--color-primary);
+    font-size: 2rem;
+}
+
+.teacher_cards {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.teacher_cards .teacher_card {
+    width: calc(100% / 3);
+    background-color: var(--pending-cards-bg);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 10px 1rem rgba(59, 61, 61, 0.5);
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    transform: scale(0.98);
+}
+
+.teacher_cards .teacher_card:hover {
+    box-shadow: none;
+}
+
+.teacher_cards .teacher_card .top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.teacher_cards .teacher_card .top img {
+    border-radius: 10px;
+}
+
+.teacher_cards .teacher_card .top .name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.teacher_cards .teacher_card .top .name h4 span {
+    color: var(--color-primary);
+}
+
+.teacher_cards .teacher_card .top h4 {
+    margin-top: 1rem;
+}
+
+.teacher_cards .teacher_card .top .teacher_name {
+    color: var(--color-primary);
+}
+
+.teacher_cards .teacher_card .bottom {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.teacher_cards .teacher_card .bottom .sendmessage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background-color: var(--color-primary);
+    color: white;
+    gap: 10px;
+    padding: 0.7rem;
+    cursor: pointer;
+}
+
+.teacher_cards .teacher_card .bottom .phone,
+.email {
+    display: flex;
+    row-gap: 5px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.teacher_cards .teacher_card .bottom .phone .iconify,
+.email .iconify {
+    padding: 1rem;
+    font-size: 20px;
+    border-radius: 50%;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+}
+
+.teacher_acc {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    background-color: var(--background);
+    overflow: hidden;
+    position: relative;
+}
+
+.teacher_acc .container {
+    background-color: var(--color-white);
+    padding: 20px;
+    width: 85%;
+    border-radius: 10px;
+}
+
+/*===teachers Dashboard*/
+.mid-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+    gap: 1rem;
+}
+
+.mid-container .timetable {
+    width: 70%;
+    border-radius: 10px;
+    background-color: #e0e3e7;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding: 10px;
+    position: sticky;
+}
+
+.bold {
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.mid-container .timetable table {
+    background-color: var(--color-white);
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.mid-container .timetable table tr th {
+    background-color: var(--background);
+    padding: 1rem;
+}
+
+.mid-container .timetable table tr td {
+    border-right: 1px solid rgb(145, 135, 135);
+    border-bottom: 1px solid rgb(145, 135, 135);
+    padding: 1rem;
+    text-align: center;
+}
+
+.mid-container .timetable h2 {
+    color: #5072a0;
+}
+
+.mid-container .profile-area {
+    width: 30%;
+    background-color: #e0e3e7;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.mid-container .profile-area .about {
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-white);
+    row-gap: 10px;
+    width: 100%;
+}
+
+.mid-container .profile-area .about h3 {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+}
+
+.mid-container .profile-area .about img {
+    border-radius: 10px;
+}
+
+.mid-container .profile-area .about .name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.mid-container .profile-area .about p span {
+    color: var(--color-primary);
+}
+
+.mid-container .profile-area .about button {
+    padding: 10px 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.mid-container .profile-area .notifications {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--color-white);
+    border-radius: 10px;
+}
+
+.mid-container .profile-area .notifications .box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.mid-container .profile-area .notifications .box p {
+    display: flex;
+    padding: 5px;
+    margin-top: 5px;
+    font-size: 14px;
+    border: 1px solid var(--color-text-muted);
+    width: 100%;
+}
+
+.mid-container .profile-area .notifications .box p .iconify {
+    color: crimson;
+    font-size: 50px;
+    margin-top: -10px;
+}
+
+.mid-container .profile-area .notifications .box form button {
+    border: 1px solid var(--color-text-muted);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.mid-container .profile-area .notifications .box form button .iconify {
+    font-size: 20px;
+}
+
+.mid-container .profile-area .notifications .empty_notifications {
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.mid-container .profile-area .notifications .empty_notifications p {
+    margin-top: 5rem;
+}
+
+.mid-container .profile-area .notifications .empty_notifications .iconify {
+    font-size: 200px;
+    color: var(--color-primary);
+    opacity: 0.3;
+
+}
+
+.mid-container .timetable .student-count {
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mid-container .timetable .student-count h3 {
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    text-align: center;
+}
+
+.mid-container .timetable .student-count .boxes {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    row-gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.mid-container .timetable .student-count .boxes .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    width: 31%;
+    row-gap: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: var(--pending-cards-bg);
+}
+
+.mid-container .timetable .student-count .boxes .box p:first-child {
+    padding: 1rem;
+    color: var(--color-primary);
+    border-radius: 50%;
+    font-weight: bold;
+    background-color: var(--color-white);
+}
+
+.mid-container .timetable .student-count .boxes .box p span {
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.mid-container .timetable .student-count .total {
+    background-color: var(--pending-cards-bg);
+    padding: 10px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+    margin-top: 1rem;
+    border-radius: 10px;
+}
+
+.mid-container .timetable .student-count .total p span {
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.mid-container .timetable .student-count .total p {
+    padding: 1rem;
+    border-radius: 50px;
+    background-color: var(--color-white);
+}
+
+/*EDIT PROFILE*/
+.edit-profile {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background);
+}
+
+.edit-profile form {
+    width: 30%;
+    background-color: var(--color-white);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.edit-profile form input {
+    border-bottom: 1px solid var(--color-primary);
+    background: var(--background);
+    width: 100%;
+    padding: 1rem;
+}
+
+
+.edit-profile form input[type=submit] {
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 50px;
+    background-color: var(--color-primary);
+    cursor: pointer;
+    color: var(--color-white);
+    font-size: 15px;
+}
+
+/*TEACHER ACCOUNT ===== ABSENCE REQUESTS*/
+.pending-approvals {
+    width: 100%;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--color-text-muted);
+}
+
+.pending-approvals .teacher_pending {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.pending-approvals .teacher_pending .pending_card {
+    width: calc(100% / 3);
+    background-color: var(--pending-cards-bg);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 1rem;
+    transform: scale(0.98);
+}
+
+.pending-approvals .teacher_pending .pending_card p {
+    font-size: 15px;
+}
+
+.pending-approvals .teacher_pending .pending_card .top {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+}
+
+.pending-approvals .teacher_pending .pending_card .top img {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    border: 2px solid var(--color-primary);
+}
+
+.pending-approvals .teacher_pending .pending_card .mid {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.pending-approvals .teacher_pending .pending_card .mid .linear_layout {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.pending-approvals .teacher_pending .pending_card .bottom {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.pending-approvals .teacher_pending .pending_card .bottom .buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.history1 {
+    margin-top: 1rem;
+}
+
+.history {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.history .history_card {
+    width: calc(100% / 3);
+    background-color: var(--pending-cards-bg);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 1rem;
+    transform: scale(0.98);
+}
+
+.history .history_card p {
+    font-size: 15px;
+}
+
+.history .history_card .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.history .history_card .top .imagery {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.history .history_card .top .imagery img {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    border: 2px solid var(--color-primary);
+}
+
+.history .history_card .mid {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.history .history_card .mid .linear_layout {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.history .history_card .bottom {
+    margin-top: 10px;
+}
+
+.history .history_card .actions {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.history .history_card .actions form button {
+    background: none;
+    font-size: 2.5rem;
+}
+
+.history .history_card .actions form button .delete-btn {
+    color: crimson;
+}
+
+.history .history_card .actions button {
+    background: none;
+    font-size: 2.5rem;
+}
+
+.history .history_card .actions button .edit-btn {
+    color: green;
+}
+
+.empty {
+    display: grid;
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--pending-cards-bg);
+    place-items: center;
+    height: 40vh;
+    margin-top: 1rem;
+}
+
+.empty p {
+    font-size: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.empty p .iconify {
+    font-size: 5rem;
+}
+
+/****==========
+**********==TAKE ATTENDANCE=============
+*****=====================
+===================*/
+.select-class {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.select-class a {
+    padding: 1rem;
+    text-align: center;
+    border-radius: 10px;
+    background-color: var(--background);
+    cursor: pointer;
+    width: 5rem;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.select-class a:last-child {
+    width: 150px;
+}
+
+.select-class a.active,
+.select-class a:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+
+.attendance-tables {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.attendance-tables table {
+    width: 100%;
+}
+
+.attendance-tables form input[type=submit] {
+    width: 20%;
+    margin: 1rem auto;
+    border-radius: 10px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+.attendance-tables table tr th {
+    background-color: var(--background);
+    padding: 1rem;
+    text-align: center;
+}
+
+.attendance-tables table tr td {
+    text-align: center;
+    padding: 1rem;
+    border-right: 1px solid rgb(145, 135, 135);
+    border-bottom: 1px solid rgb(145, 135, 135);
+}
+
+.present {
+    color: rgb(68, 182, 68);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.absent {
+    color: rgb(250, 82, 82);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.pending {
+    color: grey;
+    font-weight: bold;
+}
+
+.attendance-tables .submit {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+}
+
+.attendance-tables .submit form {
+    width: 20%;
+}
+
+.attendance-tables .submit form input[type=submit] {
+    padding: 1rem;
+    width: 100%;
+    background-color: var(--color-primary);
+    border-radius: 50px;
+    cursor: pointer;
+    color: var(--color-white);
+}
+
+.select-period {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.select-period form {
+    width: 20%;
+    background-color: var(--background);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.select-period form select {
+    width: 100%;
+    background-color: var(--color-white);
+    padding: 1rem;
+}
+
+.select-period form select option {
+    padding: 1rem;
+}
+
+.select-period form input {
+    background-color: var(--color-primary);
+    padding: 1rem;
+    color: var(--color-white);
+    cursor: 1;
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+/****==========
+**********==VIEW STUDENTS=============
+*****=====================
+===================*/
+.std {
+    margin-left: 3rem;
+    color: var(--color-primary);
+    font-size: 2rem;
+}
+
+.view-child {
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+}
+
+.view-child .child-card {
+    width: 30%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.view-child .child-card .top {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 20rem;
+}
+
+.view-child .child-card .top img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.view-child .child-card .bottom {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    row-gap: 10px;
+}
+
+.view-child .child-card .bottom p span {
+    color: var(--color-primary);
+}
+
+.view-child .child-card .action {
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.view-child .child-card .action button {
+    padding: 10px;
+    border: 1px solid var(--color-text-muted);
+    margin-top: 1rem;
+}
+
+
+
+/******==============EDIT ACC
+TEACHER ACC============
+*****************************/
+.editacc {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 80vh;
+    row-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.editacc h2 {
+    color: var(--color-primary);
+}
+
+.editacc form {
+    width: 25%;
+    background-color: var(--background);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    row-gap: 10px;
+    flex-direction: column;
+}
+
+.editacc form input {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.editacc form input[type=submit] {
+    background-color: var(--color-primary);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.view-att-top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+/*==================VIEW ATTENDANCE TEACHER
+============================
+==========================*/
+.view-att-top a {
+    color: white;
+    padding: 10px 0.8rem;
+    border-radius: 50px;
+    background-color: var(--color-primary);
+}
+
+.view-att-table {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.view-att-table tr th {
+    background-color: var(--background);
+    padding: 1rem;
+}
+
+.view-att-table tr td {
+    text-align: center;
+    padding: 1rem;
+    border-right: 1px solid rgb(145, 135, 135);
+    border-bottom: 1px solid rgb(145, 135, 135);
+}
+
+.view-att-table tr td .iconify {
+    font-size: 2rem;
+    color: green;
+    cursor: pointer;
+}
+
+.tabs {
+    width: 100%;
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tabs a {
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: var(--background);
+    cursor: pointer;
+    width: 5rem;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.tabs a.active,
+.tabs a:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+/****************===============MESSAGES****************
+*******************======================
+====================*************/
+
+.write-msg {
+    width: 100%;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    border-top: 1px solid rgb(145, 135, 135);
+    border-bottom: 1px solid rgb(145, 135, 135);
+}
+
+.write-msg h2 {
+    margin-top: 1rem;
+}
+
+.write-msg form {
+    width: 100%;
+    display: flex;
+    margin-top: 1rem;
+    justify-content: center;
+    row-gap: 1rem;
+    flex-direction: column;
+}
+
+.write-msg form input[type=submit] {
+    width: 20%;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.past-msgs {
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.past-msgs .history {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.past-msgs .history .messgage-card {
+    width: 30%;
+    padding: 10px;
+    background-color: var(--background);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.past-msgs .history .messgage-card .date {
+    border-radius: 50px;
+    background-color: #bdb5b5;
+    padding: 10px 1rem;
+    width: 50%;
+}
+
+.past-msgs .history .messgage-card .text p span {
+    color: var(--color-primary);
+}
+
+/**========EDIT ATTENDANCE==========****/
+.edit-info {
+    width: 100%;
+    overflow: hidden;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    background-color: var(--background);
+}
+
+.edit-info form {
+    display: flex;
+    row-gap: 1rem;
+    flex-direction: column;
+    background: var(--color-white);
+    border-radius: 10px;
+    padding: 1rem 10px;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+.edit-info form .input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.edit-info form .input select {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: var(--background);
+}
+
+.edit-info form .input select option {
+    padding: 2rem;
+    font-size: 15px;
+    width: 100%;
+}
+
+.edit-info form .input input[type=text] {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    background: var(--background);
+}
+
+.edit-info form input[type=submit] {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    background: var(--color-primary);
+    color: white;
+    cursor: pointer;
+}

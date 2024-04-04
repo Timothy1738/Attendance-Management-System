@@ -1,0 +1,66 @@
+<td>
+                                    <form action="../admin_account/editAttendance.php" method="post">
+                                        <input type="hidden" name="RecordID" value="<?php echo $attend['RecordID'] ?>">
+                                        <button type="submit" name="submit" onclick="return confirm('Are you sure you want to edit this record?');">
+                                            <span id="edit" class="iconify" data-icon="bx:edit">x</span>
+                                        </button>
+                                    </form>
+                                </td>
+
+s6
+<td>
+                                    <form action="../admin_account/editAttendance.php" method="post">
+                                        <input type="hidden" name="RecordID" value="<?php echo $attend['RecordID'] ?>">
+                                        <button type="submit" name="submit" onclick="return confirm('Are you sure you want to edit this record?');">
+                                            <span id="edit" class="iconify" data-icon="bx:edit">x</span>
+                                        </button>
+                                    </form>
+                                </td>
+
+s5
+<td>
+                                    <form action="../admin_account/editAttendance.php" method="post">
+                                        <input type="hidden" name="RecordID" value="<?php echo $attend['RecordID'] ?>">
+                                        <button type="submit" name="submit" onclick="return confirm('Are you sure you want to edit this record?');">
+                                            <span id="edit" class="iconify" data-icon="bx:edit">x</span>
+                                        </button>
+                                    </form>
+                                </td>
+
+s4
+ <td>
+                                    <form action="../admin_account/editAttendance.php" method="post">
+                                        <input type="hidden" name="RecordID" value="<?php echo $attend['RecordID'] ?>">
+                                        <button type="submit" name="submit" onclick="return confirm('Are you sure you want to edit this record?');">
+                                            <span id="edit" class="iconify" data-icon="bx:edit">x</span>
+                                        </button>
+                                    </form>
+                                </td>
+s3
+<td>
+                                    <form action="../admin_account/editAttendance.php" method="post">
+                                        <input type="hidden" name="RecordID" value="<?php echo $attend['RecordID'] ?>">
+                                        <button type="submit" name="submit" onclick="return confirm('Are you sure you want to edit this record?');">
+                                            <span id="edit" class="iconify" data-icon="bx:edit">x</span>
+                                        </button>
+                                    </form>
+                                </td>
+s2
+<td>
+                                    <form action="../admin_account/editAttendance.php" method="post">
+                                        <input type="hidden" name="RecordID" value="<?php echo $attend['RecordID'] ?>">
+                                        <button type="submit" name="submit" onclick="return confirm('Are you sure you want to edit this record?');">
+                                            <span id="edit" class="iconify" data-icon="bx:edit"></span>
+                                        </button>
+                                    </form>
+                                </td>
+
+extra lessons
+<td>
+                                    <form action="../admin_account/editExtraLessons.php" method="post">
+                                        <input type="hidden" name="RecordID" value="<?php echo $attend['OverrideID'] ?>">
+                                        <button type="submit" name="submit" onclick="return confirm('Are you sure you want to edit this record?');">
+                                            <span id="edit" class="iconify" data-icon="bx:edit">x</span>
+                                        </button>
+                                    </form>
+                                </td>
